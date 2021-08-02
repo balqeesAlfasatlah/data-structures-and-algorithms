@@ -10,9 +10,12 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 const raisedToTheThird = (arr) => {
   let newArray =[];
-  for(let i=0; i<arr.length ;i++){
-    newArray.push(2 ** arr[i]);
+  for(let i=0 ;i<arr.length ;i++){
+    newArray.push( 3 ** arr[i]);
   }
+    
+  
+
   return newArray;
 };
 
@@ -40,10 +43,10 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 const addQuestion = (arr) => {
   let questionArr = [];
   arr.map( e=>{
-   questionArr.push(e)
+   questionArr.push(`${e}?`)
   });
 
-  return (`${questionArr}?`);
+  return (questionArr)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -86,7 +89,11 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+  let myList = [];
+  arr.map(e=>{
+    myList.push(2 ** e)
+  });
+  return myList
 };
 
 /* ------------------------------------------------------------------------------------------------
