@@ -9,14 +9,12 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  let newArray =[];
-  for(let i=0 ;i<arr.length ;i++){
-    newArray.push( 3 ** arr[i]);
-  }
-    
-  
+  let incremArray =[];
+  arr.forEach(num=>{
+    incremArray.push(Math.pow(num ,3));
+  });
 
-  return newArray;
+  return incremArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,12 +24,11 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  let incremArray =[]
-  arr.map(num=>{
-   incremArray.push(num +1);
+  let list =[];
+  arr.map(item =>{
+    list.push(item+1);
   });
-
-  return incremArray;
+  return list;
 };
 
 /* ------------------------------------------------------------------------------------------------
