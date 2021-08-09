@@ -52,14 +52,15 @@ For example:
 const a = [1, 2, 3];
 appendFirstToLast(a);
 console.log(a) prints [1, 2, 3, 1]
------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------------ 
 
 const appendFirstToLast = (arr) => {
+   // Solution code here...
   return  arr.push(arr[0]);
   
 };
 
-/* ------------------------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
 Write a function that accepts an object and an integer as arguments and adds a new property to the object called yearBorn. The value of the yearBorn property should be the integer that was passed in.
