@@ -16,8 +16,9 @@ const toLastNames = people => {
   return Object.values(people).map((e)=>{
     list.push(e.firstName + ' ' + e.lastName)
   });
+  
 };
-return list
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -26,7 +27,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr) => {
+const addValues = arr => {
  arr.reduce((accumulator , currentValue)=>{
    return accumulator + currentValue
  },0)
