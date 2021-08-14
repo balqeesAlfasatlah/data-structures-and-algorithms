@@ -23,9 +23,8 @@ Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
 const getNames = (arr) => {
-  let myArr =[];
-  arr.map(e=>{
-    myArr.push(e.name.split("").reverse().join(""));
+  let myArr = arr.map(i=>{
+    return i.name.split("").reverse().join("");
   })
   return myArr;
 };
@@ -38,9 +37,9 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
- str =`${srt} The end.`
+  return `${str} The end.`
 };
-return srt;
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -52,15 +51,13 @@ For example:
 const a = [1, 2, 3];
 appendFirstToLast(a);
 console.log(a) prints [1, 2, 3, 1]
------------------------------------------------------------------------------------------------- 
+------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-   // Solution code here...
-  return  arr.push(arr[0]);
-  
+  arr.push(arr[0])
 };
 
- ------------------------------------------------------------------------------------------------
+/* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
 Write a function that accepts an object and an integer as arguments and adds a new property to the object called yearBorn. The value of the yearBorn property should be the integer that was passed in.
@@ -76,7 +73,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
+  obj.yearBorn = year
 };
 
 /* ------------------------------------------------------------------------------------------------
