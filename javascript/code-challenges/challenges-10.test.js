@@ -8,11 +8,10 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
-  if(str.length === 10 || str.length === null ){
-    return str;
-  }else{
-    return str.length - 10;
-  }
+  // Solution code here...
+  let myArr = str.split('')
+  myArr.splice(0, myArr.length -10);
+  return myArr;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,6 +30,15 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  let max = 0;
+  for(let i=0 ; i<matrix.length; i++){
+    for(let j=0 ; j<matrix[i].length; j++){
+      if(max < matrix[i][j]){
+        max = matrix[i][j];
+      }
+    }
+  }
+  return max;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,6 +57,13 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let myTotal = 0;
+  for(let i=0; i<matrix.length ;i++){
+    for(let j=0; j< matrix[i].length ;j++){
+      myTotal +=matrix[i][j];
+    }
+  }
+  return myTotal;
 };
 
 
@@ -76,8 +91,15 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-
-};
+  let newArr = [];
+  for(let i = 0; i < stores.length; i++){
+    for(let j = 0; j < stores[i].length; j++){
+      newArr[j] = (newArr[j] || 0) + stores[i][j];
+    }
+  }
+  return(newArr);
+ 
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -91,6 +113,11 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let myArray = [];
+  hours.forEach((value, idx) => {
+    myArray.push({ sales: `${data[idx]} cookies`, time: `${value}` })
+  });
+  return myArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,6 +143,7 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
