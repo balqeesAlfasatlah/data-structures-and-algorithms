@@ -12,7 +12,9 @@ Write a function named screenForNames that takes in an array of strings and uses
 
 const screenForNames = (arr) => {
   // Solution code here...
- // return arr.filter(val => /^((Mr||Mrs||Ms||Ds).\s)[A-Z]/.test(val));
+  let myarr =  /^(Mr. |Mrs. |Ms. |Dr. )[A-Za-z]/g;
+  let newArr = arr.filter(e => e.match(myarr));
+  return newArr;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,7 +136,7 @@ This data could be sorted by name or price.
 const sortBy = (property, arr) => {
   // Solution code here...
   if(property === "name"){
-    return arr.sortBy((a,b)=> a.name.localeCompare(b.name));
+    return arr.sort((a,b)=> a.name.localeCompare(b.name));
   }
   if(property === "price"){
 
@@ -165,6 +167,7 @@ https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
   // Solution code here...
+  return /^(https:\/\/)/.test(url)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -188,6 +191,32 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  let newArr =[];
+  board.forEach(item =>{
+    item.forEach(val =>{
+      newArr.push(val);
+    });
+  });
+
+  for(let i=0; i<9; i+3){
+    if(newArr[i] == newArr[i+2] && newArr[i] == newArr[i+1] && newArr[i] != ''){
+      return true;
+    }else{
+      for(let i=0; i<3; i++){
+        if(newArr[i] == newArr[i+6] && newArr[i] == newArr[i+3] && newArr[i] != ''){
+          return true;
+
+    }else{
+      for(let i=0; i<3; i+2){
+        if(newArr[i] == newArr[8-i] && newArr[i] == newArr[4] && newArr[i] != ''){
+          return true;
+
+    }else{
+      return false;}
+    }}
+    }
+  }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
